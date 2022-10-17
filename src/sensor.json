@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "カメラ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/360camera.png",
+        "check":true
+    },
+    {
+        "id": 2,
+        "name": "雷センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Lightning_sensor.png",
+        "check":true
+    },
+    {
+        "id": 3,
+        "name": "GPSセンサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/GPS_sensor.png",
+        "check":true
+    },
+    {
+        "id": 4,
+        "name": "ICカード",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/ICcard.png",
+        "check":true
+    },
+    {
+        "id": 5,
+        "name": "pepper",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/pepper.png",
+        "check":true
+    },
+    {
+        "id": 6,
+        "name": "ウェアラブルデバイス",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Wearable_device.png",
+        "check":true
+    },
+    {
+        "id": 7,
+        "name": "ジャイロセンサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/gyro_sensor.png",
+        "check":true
+    },
+    {
+        "id": 8,
+        "name": "スマートロック",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/smartlock.png",
+        "check":true
+    },
+    {
+        "id": 9,
+        "name": "スマートフォン",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/smartphone.png",
+        "check":true
+    },
+    {
+        "id": 10,
+        "name": "ドップラーセンサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Doppler_sensor.png",
+        "check":true
+    },
+    {
+        "id": 11,
+        "name": "ドローン",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/drone.png",
+        "check":true
+    },
+    {
+        "id": 12,
+        "name": "ホコリセンサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Dust_sensor.png",
+        "check":true
+    },
+    {
+        "id": 13,
+        "name": "マイク",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Microphone.png",
+        "check":true
+    },
+    {
+        "id": 14,
+        "name": "温度・湿度センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Temperature_humidity_sensors.png",
+        "check":true
+    },
+    {
+        "id": 15,
+        "name": "距離センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Destance_sensor.png",
+        "check":true
+    },
+    {
+        "id": 16,
+        "name": "指紋センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Fingerprint_sensor.png",
+        "check":true
+    },
+    {
+        "id": 17,
+        "name": "自動運転",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Automatic_operation.png",
+        "check":true
+    },
+    {
+        "id": 18,
+        "name": "照度センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Illuminance_sensor.png",
+        "check":true
+    },
+    {
+        "id": 19,
+        "name": "加速度センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Accelerometer.png",
+        "check":true
+    },
+    {
+        "id": 20,
+        "name": "紛失防止タグ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Loss_prevention_tag.png",
+        "check":true
+    },
+    {
+        "id": 21,
+        "name": "においセンサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/smellsensor.png",
+        "check":true
+    },
+    {
+        "id": 22,
+        "name": "曲げセンサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Bending_sensor.png",
+        "check":true
+    },
+    {
+        "id": 23,
+        "name": "磁気センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Magnetic_sensors.png",
+        "check":true
+    },
+    {
+        "id": 24,
+        "name": "土壌湿度センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Soilhumidity_sensor.png",
+        "check":true
+    },
+    {
+        "id": 25,
+        "name": "水位センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Waterlevel_sensor.png",
+        "check":true
+    },
+    {
+        "id": 26,
+        "name": "気圧センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Airpressure_sensor.png",
+        "check":true
+    },
+    {
+        "id": 27,
+        "name": "振動センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Vibration_sensor.png",
+        "check":true
+    },
+    {
+        "id": 28,
+        "name": "人感センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Person_sensor.png",
+        "check":true
+    },
+    {
+        "id": 29,
+        "name": "電流センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Current_sensor.png",
+        "check":true
+    },
+    {
+        "id": 30,
+        "name": "紫外線センサ",
+        "url":"http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/UV_sensor.png",
+        "check":true
+    }
+]
