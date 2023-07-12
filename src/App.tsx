@@ -6,7 +6,7 @@ export const Rolette = memo((props: { tags: any; kakutei: boolean }) => {
   const [start, setStart] = useState(false);
   const [index, setIndex] = useState(0);
 
-  var random_data: string[] = new Array(0);
+  let random_data: string[] = new Array(0);
 
   const [ran, setRan] = useState(random_data);
 
@@ -18,27 +18,22 @@ export const Rolette = memo((props: { tags: any; kakutei: boolean }) => {
 
   //ルーレットを回す処理
   useEffect(() => {
-    const sensor_check = () => {
-      SensorData.filter(function (item) {
-        for (let i = 0; i < sensro_tags.length; i++) {
-          if (item.id === sensro_tags[i]) {
-            random_data.push(item.url);
-          }
-        }
-      });
-      setRan(random_data);
-    };
-    sensor_check();
-    if (start) {
-      const interval = setInterval(() => {
-        setIndex((oldIndex) => {
-          if (oldIndex < random_data.length - 1) return oldIndex + 1;
-          return 0;
-        });
-      }, 100); //ルーレットの中身を切り替える速度
-      return () => clearInterval(interval);
-    } else if (!start) {
+    if (!start) {
+      return; // startがfalseの場合は処理を終了
     }
+
+    const sensorTags = new Set(sensro_tags);
+    const filteredData = SensorData.filter((item) => sensorTags.has(item.id));
+    const randomData = filteredData.map((item) => item.url);
+    setRan(randomData);
+
+    const interval = setInterval(() => {
+      setIndex((oldIndex) =>
+        oldIndex < randomData.length - 1 ? oldIndex + 1 : 0
+      );
+    }, 200);
+
+    return () => clearInterval(interval);
   }, [start]);
 
   return (
@@ -72,39 +67,43 @@ export const Rolette = memo((props: { tags: any; kakutei: boolean }) => {
 });
 
 function App() {
-  let random_data: string[] = new Array(0);
   const [kakutei, setKakutei] = useState(false);
   const [checkedTags, setCheckedTags] = useState<number[]>([
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     22, 23, 24, 25, 26, 27, 28, 29, 30,
   ]);
-  const handleCheckTag = useCallback(
-    (tagId: number) => {
-      if (checkedTags.includes(tagId)) {
-        setCheckedTags((prev) => {
-          const index = prev.findIndex((val) => val === tagId);
-          const newArr = [...prev];
-          newArr.splice(index, 1);
-          return newArr;
-        });
+
+  const handleCheckTag = useCallback((tagId: number) => {
+    setCheckedTags((prev) => {
+      if (prev.includes(tagId)) {
+        return prev.filter((val) => val !== tagId);
       } else {
-        setCheckedTags((prev) => {
-          return [...prev, tagId];
-        });
+        return [...prev, tagId];
       }
-    },
-    [checkedTags]
-  );
+    });
+  }, []);
 
   useEffect(() => {
-    const img = new Image();
-    const img2 = new Image();
-    const img3 = new Image();
-    img.src =
-      "http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Lightning_sensor.png";
-    img2.src = "http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/ICcard.png";
-    img3.src =
-      "http://tpuccm.sakura.ne.jp/millezo/Iot/sensor/Soilhumidity_sensor.png";
+    const images = SensorData.map((item) => {
+      const image = new Image();
+      image.src = item.url;
+      return image;
+    });
+    const preloadImages = () => {
+      return Promise.all(
+        images.map(
+          (image) =>
+            new Promise((resolve) => {
+              image.onload = resolve;
+            })
+        )
+      );
+    };
+
+    preloadImages().then(() => {
+      // すべての画像がプリロードされました
+      console.log("すべての画像がプリロードされました");
+    });
   }, []);
 
   return (
